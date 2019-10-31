@@ -1,16 +1,29 @@
-#include <iostream>
-using namespace std;
+//Walkiewicz Joanna
 
-int main() {
-	int i, j;
-	cin >> i;
-	do {
-		cin >> j;
-	} while (i != j) 
-	{
-		if (i ==j) cout << "Brawo wygrales";
-		if (j > i) cout << "Liczba jest za duza";
-		if (j < i) cout << "Liczba jest za mala";
+#include <iostream>
+int main()
+{
+using std::cout;
+using std::cin;
+using std::endl;
+
+int doZgadniecia;
+int liczba;
+cout <<"Podaj liczbę do zgadnięcia: ";
+cin>> doZgadniecia;
+cout <<"Podaj swoją liczbę ";
+cin>> liczba;
+while(doZgadniecia != liczba)
+{
+	if(liczba > doZgadniecia) {
+	cout <<"Liczba jest za duża" << endl;
+	} else {
+	cout << "Liczba jest za mała" << endl;
 	}
-	return 0;
+
+	cout << "Podaj swoją liczbę " << endl;
+	cin>> liczba;
+}
+
+cout <<"Zgadłeś!"<< endl;
 }

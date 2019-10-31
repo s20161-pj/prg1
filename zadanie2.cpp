@@ -1,27 +1,50 @@
-//Joanna Walkiewicz, Oskar Kowalow
+//Walkiewicz Joanna
+
 
 #include <iostream>
 
-using std::cout;
-using std::cin;
+using namespace std;
 
-int main() {
-  int n,c,k, space = 1;
-  cout << "Podaj liczbe: ";
-  cin >> n;
+int main()
+{
+	cout << "Podaj rozmiar diamentu: ";
+	int r;
+	int w;
+	int s;
+	int x;
+	int y;
+	int g;
+	cin >> r;
+	y = (2 * r) + 1;
+	for (w=0; w<((2*r)+1); w++)
+	{
+		x = r - w;
+		if (x < 0)
+		{
+			x = -x;
+		}
+       for (s=0; s<x; s++) 
+	   { 
+		   cout << " ";
+	   }
+	 
+	   for (g=0; g<y-(2*s);g++)
+	   {
+		   if (g == 0)
+		   {
+			   cout << "*";
+		   }
+		   else if(g==y-(2*s)-1) 
+		   {
+			   cout << "*";
+		   }
+		   else 
+		   {
+			   cout << " ";
+		   }
+	   }
+	   cout << endl;
+	}
 
-  for (k = 1; k <= n; k++) {
-    for (c = 1; c <= space; c++)
-      cout << " ";
-
-      space--;
-
-      for (c = 1; c<=2*k-1; c++)
-       cout << "*";
-
-      cout << "\n";
-
-  }
-
-return 0;
+	return 0;
 }
